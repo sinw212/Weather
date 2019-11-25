@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/image_sky"
-    android:gravity="center_horizontal"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/weather_panel"
-        android:layout_width="350dp"
-        android:layout_height="600dp"
-        android:layout_marginTop="70dp"
-        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center"
         android:orientation="vertical"
         android:visibility="gone">
 
@@ -22,9 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="오늘의 날씨"
+            android:textColor="#353535"
             android:textSize="45sp"
-            android:textStyle="bold"
-            android:textColor="#353535"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_today_date"
@@ -33,7 +32,7 @@
             android:layout_marginTop="20dp"
             android:text="오늘 날짜 / 시간"
             android:textSize="25sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="300dp"
@@ -55,8 +54,8 @@
                     android:id="@+id/txt_country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:layout_gravity="center_vertical|center"
+                    android:layout_marginStart="8dp"
                     android:text="국가"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -65,8 +64,8 @@
                     android:id="@+id/txt_temperature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:layout_gravity="center_vertical|center"
+                    android:layout_marginStart="8dp"
                     android:text="기온"
                     android:textSize="40sp"
                     android:textStyle="bold" />
@@ -75,14 +74,14 @@
 
         </LinearLayout>
 
-            <TextView
-                android:id="@+id/txt_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="상세 날씨"
-                android:textSize="35sp"
-                android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="상세 날씨"
+            android:textSize="35sp"
+            android:textStyle="bold" />
 
         <TableLayout
             android:layout_width="200dp"
@@ -98,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:text="최고기온 : "
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_temp_max"
@@ -108,7 +107,7 @@
                     android:layout_marginStart="8dp"
                     android:text="최고기온"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -121,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:text="최저기온 : "
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_temp_min"
@@ -131,7 +130,7 @@
                     android:layout_marginStart="8dp"
                     android:text="최고기온"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </TableRow>
 
@@ -144,14 +143,14 @@
 
             <TableRow
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="바람"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_wind"
@@ -161,7 +160,7 @@
                     android:layout_marginStart="8dp"
                     android:text="풍속"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -174,7 +173,7 @@
                     android:layout_height="wrap_content"
                     android:text="구름량"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_cloud"
@@ -184,7 +183,7 @@
                     android:layout_marginStart="8dp"
                     android:text="구름량"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </TableRow>
 
@@ -198,7 +197,7 @@
                     android:layout_height="wrap_content"
                     android:text="기압"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_pressure"
@@ -208,7 +207,7 @@
                     android:layout_marginStart="8dp"
                     android:text="기압"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </TableRow>
 
@@ -222,7 +221,7 @@
                     android:layout_height="wrap_content"
                     android:text="습도"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_humidity"
@@ -232,7 +231,7 @@
                     android:layout_marginStart="8dp"
                     android:text="습도"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -245,7 +244,7 @@
                     android:layout_height="wrap_content"
                     android:text="일출시간"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_sunrise"
@@ -255,7 +254,7 @@
                     android:layout_marginStart="8dp"
                     android:text="일출시간"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -268,7 +267,7 @@
                     android:layout_height="wrap_content"
                     android:text="일몰시간"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_sunset"
@@ -278,16 +277,18 @@
                     android:layout_marginStart="8dp"
                     android:text="일몰시간"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </TableRow>
         </TableLayout>
     </LinearLayout>
 
     <ProgressBar
         android:id="@+id/loading"
-        android:indeterminate="true"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
 
-</RelativeLayout>
+</LinearLayout>

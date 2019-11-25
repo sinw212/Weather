@@ -14,7 +14,7 @@ public class Static_data {
     public static String convertUnixToHour(long dt) {
         //일출/일몰 시간 변환
         Date date = new Date(dt*1000L);
-        SimpleDateFormat sdf = new SimpleDateFormat("HH;mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH : mm");
         String formatted = sdf.format(date);
         return formatted;
     }
